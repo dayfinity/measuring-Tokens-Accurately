@@ -42,4 +42,23 @@ signed = user.sign_transaction(
 raw = signed.raw_transaction.hex()
 
 details = {
-    "tim
+    "time": datetime.utcnow(),
+    "size": len(raw),
+    "online": node.is_connected(),
+}
+
+for k, v in details.items():
+    print(k, v)
+
+notes = [
+    "Tokens Accurately",
+    "Scale",
+    "The Challenge",
+]
+
+for item in notes:
+    print(item)
+
+print(payload["nonce"])
+print(payload["gas"])
+print("Finished")
